@@ -1,6 +1,6 @@
 using System.Dynamic;
 
-public class Fraction
+public class Fraction  //the fraction class
 {
     private int _top;
     private int _bottom;

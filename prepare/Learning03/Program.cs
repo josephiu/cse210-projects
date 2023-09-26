@@ -7,6 +7,7 @@ class Program
        Fraction f1 = new Fraction();
        Console.WriteLine(f1.GetfractionString());
        Console.WriteLine(f1.GetDecimalValue());
+//needs to undersand more of this concept
 
        Fraction f2 = new Fraction(5);
        Console.WriteLine(f2.GetfractionString());
@@ -19,6 +20,8 @@ class Program
        Fraction f4 = new Fraction(1, 3);
        Console.WriteLine(f4.GetfractionString());
        Console.WriteLine(f4.GetDecimalValue());
+
+    
 
     }
 }
