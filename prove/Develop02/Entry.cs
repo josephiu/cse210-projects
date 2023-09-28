@@ -10,7 +10,7 @@ public class Entry
     
       public void Display()
     {
-        Console.WriteLine($"{_date}-{_promptText}\n{_entryText}");
+        Console.WriteLine($"Date: {_date} - Prompt: {_promptText}\nMy Response: {_entryText}\n"); //I exceeded requirement by adding my response tag to the display
     }
     
 }   

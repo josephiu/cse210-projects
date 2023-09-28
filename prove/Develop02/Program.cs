@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+
 class Program
 {
     static void Main(string[] args)
@@ -22,6 +23,11 @@ class Program
         //declares the integer loop variable beforehand, help from Kodfy.net
         // int index = 1;
         
+
+
+
+        Journal theEntry = new Journal();
+        
         while (user != 5)
         {
 
@@ -37,6 +43,7 @@ class Program
 
             
             }
+            Console.Write("What would you like to do? ");
             user = int.Parse(Console.ReadLine());
             
             
@@ -65,34 +72,52 @@ class Program
                 
                 
                 // this adds the code to a list in the journal       
-
-                Journal theEntry = new Journal();
+           
 
                 theEntry.AddEntry(userInput);
 
-                theEntry.DisplayAll();
-                                            
-
-
+                
             }
 
 
             else if (user == 2)
 
             {
-                
-                Journal showList = new Journal();               
-                                                                        
+                // calls the display mettod of the entry
+                        
+                theEntry.DisplayAll();                                                  
                                
-                showList.DisplayAll();
-                
-                Console.WriteLine("saved");
             }
 
-                  
-                                  
+            else if (user == 3)
+            {
+                Console.Write("What is the file name? ");
+                string  userInput2 = Console.ReadLine();
+                theEntry.LoadFromFile(userInput2);
 
-                     
+                theEntry.DisplayAll();   
+                
+            }
+
+
+            else if (user == 4)
+            
+            {
+                
+                Console.Write("What is the file name? ");
+                string  userInput2 = Console.ReadLine();
+
+                theEntry.SaveToFile(userInput2);
+
+                
+
+                
+
+                
+            }
+
+                       
+ 
         
             
 
