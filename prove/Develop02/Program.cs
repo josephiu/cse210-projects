@@ -7,6 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {   
+
         List<string>menu = new List<string>();
         menu.Add ("1.Write");
         menu.Add ("2.Display");
@@ -109,16 +110,12 @@ class Program
 
                 theEntry.SaveToFile(userInput2);
 
-                
-
-                
+                               
 
                 
             }
 
-                       
- 
-        
+                          
             
 
 
