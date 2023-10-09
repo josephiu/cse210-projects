@@ -31,24 +31,14 @@ public class Scripture
             
 
              //Console.WriteLine($"{word} ");
-
-
-          
-            
-
-
-            
+   
+                       
            
 
         }
     }
 
-    //getter that get the _words from the private list
- 
-
-       
-
-
+    //getter that get the _words from the private list    
  
 
     public void HideRandomWords()
