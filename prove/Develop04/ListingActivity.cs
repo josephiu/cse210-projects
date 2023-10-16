@@ -13,7 +13,7 @@ public class ListingActivity : Activity
     
     private List<string>_mylisting = new List<string>();
 
-     public ListingActivity(string activityName, string ActivityDetails) : base(activityName, ActivityDetails)
+     public ListingActivity(string ActivityName, string ActivityDetails) : base(ActivityName, ActivityDetails)
      {
      
      }
