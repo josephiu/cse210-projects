@@ -2,6 +2,9 @@ public class Word
 {
     private string _text;
     private bool _isHidden;
+
+
+    /// </Seting a properties for the local variables>
     public bool IsHidden{ get{return _isHidden;} set{_isHidden = value;}}
 
     public Word (string text)
@@ -25,18 +28,6 @@ public class Word
             return _text;
     }
 
-    // //GETTER
-    // public string GetText()
-    // {
-    //     // Additional logic...
-    //     return _text;
-    // }
-
-    // //SETTER
-    // public void SetText(string text)
-    // {
-    //     _text = text;
-    //     // Additional logic...
-    // }
+   
 }
 

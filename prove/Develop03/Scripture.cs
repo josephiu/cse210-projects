@@ -8,11 +8,11 @@ public class Scripture
 
     // contructor
     public Scripture(string text, Reference reference)
-    {  
+    {
         _reference = reference;
-        string[] words = text.Split(" ");             
+        string[] words = text.Split(" ");
 
-        foreach (string i  in words)
+        foreach (string i in words)
         {
             Word word = new Word(i);
             _words.Add(word);
@@ -20,49 +20,45 @@ public class Scripture
     }
 
 
-
-    public void  HideRandomWords()
-    {  
-        Word word = new Word();
+    public void HideRandomWords()
+    {
         Random randomGenerator = new Random();
         int counter = 0;
         while (counter < 3 && !IsCompletelyHidden())
         {
             int index = 0;
             do
-                index = randomGenerator.Next(word.count);
-            while ( words[index].IsHidden == true );
-                words[i].IsHidden == true;
-                counter++;
+                index = randomGenerator.Next(_words.Count);
+            while (_words[index].IsHidden == true);
+            _words[index].IsHidden = true;
+            counter++;
         }
-       
     }
+
 
     public void DisplayWords()
     {
-            foreach word in words
-                Console.Write( word.GetdisplayText());
-                Console.WriteLine();
-
-               
+        Console.Write(_reference.GetDisplayText());
+        Console.Write("\"");
+        foreach (Word word in _words)
+        {
+            Console.Write(word.GetDisplayText());
+            Console.Write(" ");
+        }
+        Console.Write("\"");
     }
-
 
 
     public bool IsCompletelyHidden()
     {
-        foreach (var word in words)
+        foreach (Word word in _words)
         {
-             if (!word.IsHidden)
-             {
-                return  false;
-             }
+            if (!word.IsHidden)
+            {
+                return false;
+            }
         }
-            
         return true;
-
-        
-            
     }
 
 
